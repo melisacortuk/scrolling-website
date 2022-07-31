@@ -1,0 +1,161 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,800&family=Merienda&display=swap');
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(2, 100%, 61%);
+  --first-color-alt: hsl(2, 89%, 53%);
+  --title-color: hsl(233, 20%, 15%);
+  --text-color: hsl(233, 4%, 35%);
+  --body-color: hsl(2, 100%, 97%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'EB Garamond', serif;
+  --second-font: 'Merienda', cursive;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  transition: .2s linear;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: .5rem;
+  height: 5rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #989898;
+  border-radius: 5rem;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  background: linear-gradient(#200016, #10001f);
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1024px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.header {
+  position: fixed;
+  width: 95%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+}
+
+.nav-logo {
+  font-size: 2rem;
+  font-family: var(--second-font);
+  text-transform: uppercase;
+}
+
+.nav-list {
+  display: flex;
+  gap: 4rem;
+}
+
+.nav-item a {
+  font-size: 1.3rem;
+  border-radius: 1.2rem;
+  padding: .2rem .5rem;
+}
+
+.nav-item a:hover, .active-link {
+  background-color: #FFF;
+  color: var(--text-color);
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.main img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.main::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 6.25rem;
+  width: 100%;
+  background: linear-gradient(to top, #200016, transparent);
+}
+
+#moon {
+  mix-blend-mode: screen;
+  transform: translateY(80px);
+}
+
+.life {
+  font-size: 1.2rem;
+  font-family: var(--second-font);
+  color: #FFF;
+  text-transform: uppercase;
+  transform: translateY(140px);
+}
+
+.home-data {
+  color: #ccc;
+  padding: 2rem;
+}
+
+.home-title {
+  font-size: 1.8rem;
+  margin: 1.2rem;
+  font-family: var(--second-font);
+}
+
+.home-title span {
+  color: #B58BB9;
+}
+
+.home-description {
+  margin: 1.2rem;
+  font-size: 18px;
+}
